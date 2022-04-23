@@ -18,24 +18,24 @@ function Post({
     return (
         <div className='post'>
             <div className="post__avatar">
-                <Avatar />
+                <Avatar src={avatar} sx={{ width: 50, height: 50 }} />
             </div>
 
             <div className="post__body">
                 <div className="post__header">
                     <div className="post__headerText">
-                        <h3>Bruno Leo 
-                            <span><VerifiedIcon className='post__badge' /></span>
-                            <span className='post__headerSpecial'>@codeskills</span>
+                        <h3>{displayName} 
+                            {verified && <span><VerifiedIcon className='post__badge' /></span>}
+                            <span className='post__headerSpecial'> @{userName}</span>
                         </h3>
                     </div>
                     <div className="post__headerDescription">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi placeat suscipit obcaecati eos libero temporibus?
+                            {text}
                         </p>
                     </div>
                 </div>
-                <img src="https://i.pinimg.com/originals/a8/69/16/a8691671f6269ebac0436049c5206882.gif" alt="" />
+                <img src={image} alt="" />
                 <div className="post__footer">
                     <ChatBubbleOutlineOutlinedIcon fontSize='small' />
                     <RepeatOutlinedIcon fontSize='small' />
