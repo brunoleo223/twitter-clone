@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import { Avatar } from '@mui/material';
-import './Post.css';
+import './style.css';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import RepeatOutlinedIcon from '@mui/icons-material/RepeatOutlined';

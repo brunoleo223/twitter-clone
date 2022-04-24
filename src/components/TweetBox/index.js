@@ -1,10 +1,10 @@
 import { Avatar, Button } from '@mui/material';
 import React, { useState } from 'react';
-import db from './firebase';
-import './TweetBox.css';
+import db from '../../utils/firebase';
+import './style.css';
 import { collection, doc, setDoc } from "firebase/firestore"; 
 
-function TweetBox(){
+function TweetBox({postsOnDatabase}){
 
     const [tweetMessage, setTweetMessage] = useState('');
     const [tweetImage, setTweetImage] = useState('');
@@ -28,7 +28,8 @@ function TweetBox(){
             verified: true,
             text: tweetMessage,
             image: tweetImage,
-            avatar: "https://pbs.twimg.com/profile_images/1509897352081022978/jPWokXTe_x96.jpg"
+            avatar: "https://pbs.twimg.com/profile_images/1509897352081022978/jPWokXTe_x96.jpg",
+            time: new Date()
         }
 
         // call function to add post
@@ -37,6 +38,8 @@ function TweetBox(){
         // reset states
         setTweetImage("");
         setTweetMessage("");
+
+        postsOnDatabase(db)
     }
 
     return (
