@@ -18,7 +18,7 @@ function Feed(){
 
         postsOnDatabase(db);
 
-    }, []);
+    }, [posts]);
 
     return (
         <div className='feed'>
@@ -32,7 +32,7 @@ function Feed(){
             <Post
                 key={post.text}
                 displayName={post.displayName}
-                username={post.username}
+                userName={post.userName}
                 verified={post.verified}
                 text={post.text}
                 avatar={post.avatar}
