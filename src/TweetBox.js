@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import db from './firebase';
 import './TweetBox.css';
 import { collection, doc, setDoc } from "firebase/firestore"; 
-// import { collection } from 'firebase/firestore';
 
 function TweetBox(){
 

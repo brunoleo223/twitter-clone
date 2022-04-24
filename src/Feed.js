@@ -4,7 +4,6 @@ import Post from './Post';
 import TweetBox from './TweetBox';
 import db from './firebase';
 import { collection, getDocs } from 'firebase/firestore';
-import FlipMove from 'react-flip-move';
 
 function Feed(){
 
@@ -21,6 +20,7 @@ function Feed(){
 
     }, [posts]);
 
+
     return (
         <div className='feed'>
             <div className="feed__header">
@@ -29,8 +29,7 @@ function Feed(){
 
             <TweetBox />
 
-            <FlipMove>
-                {posts.map((post) => (
+            {posts.map((post) => (
                 <Post
                     key={post.text}
                     displayName={post.displayName}
@@ -40,8 +39,7 @@ function Feed(){
                     avatar={post.avatar}
                     image={post.image}
                 />
-                ))}
-            </FlipMove>
+            ))}
         
         </div>
     );
