@@ -2,7 +2,7 @@
 
 That is my first project whith ReactJS.
 
-![Twitter Clone](https://im.ezgif.com/tmp/ezgif-1-a0937a54bb.gif)
+![Twitter Clone](https://brunoleo.com.br/github/ezgif-1-a0937a54bb.gif)
 
 You can access the clone here: https://new-twitter-clone.web.app/
 
