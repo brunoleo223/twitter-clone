@@ -12,6 +12,7 @@ import ListAltIcon from '@mui/icons-material/ListAlt';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { Button } from "@mui/material";
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Sidebar(){
     return (
@@ -31,6 +32,10 @@ function Sidebar(){
 
             {/* Button -> Tweet */}
             <Button variant="outlined" className="sidebar__tweet" fullWidth>Tweet</Button>
+
+            <div className="sidebar__github-button">
+                <a href=""><GitHubIcon /> GITHUB REPOSITORY</a>
+            </div>
         </div>
     );
 }
