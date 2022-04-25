@@ -13,4 +13,4 @@ Used in the project:
 - React Twitter Embed
 - Backend in Firebase
 
-An especial thanks to guys from Clever Programmer for the help.
+Special thanks to the guys at Clever Programmer for their help.
