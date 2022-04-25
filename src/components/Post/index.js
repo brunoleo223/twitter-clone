@@ -13,7 +13,8 @@ const Post = forwardRef(({
     verified,
     text,
     image,
-    avatar
+    avatar,
+    time
 }, ref) => {
     return (
         <div className='post' ref={ref}>
@@ -30,7 +31,7 @@ const Post = forwardRef(({
                         </h3>
                     </div>
                     <div className="post__headerDescription">
-                        <p>
+                        <p> 
                             {text}
                         </p>
                     </div>

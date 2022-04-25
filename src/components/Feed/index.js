@@ -10,15 +10,26 @@ function Feed(){
 
     const [posts, setPosts] = useState([]);
 
-    async function postsOnDatabase(db) {
+    async function postsOnDatabase(db, posts) {
         const postsCol = collection(db, 'posts');
         const postsSnapshot = await getDocs(postsCol);
-        setPosts(postsSnapshot.docs.map(doc => doc.data()));
+        const allPosts = postsSnapshot.docs.map(doc => doc.data());
+        const sortedPosts = sortPostsBasedTimestamp(allPosts)
+        setPosts(sortedPosts);
+        
+         
+    }
+
+    function sortPostsBasedTimestamp(posts){
+        const sortedPosts = posts.sort(function(a,b){
+            return new Date(b.time) - new Date(a.time);
+        });
+
+        return sortedPosts;
     }
 
     useEffect(() => {
-        postsOnDatabase(db);
-
+        postsOnDatabase(db, posts);
     }, []);
 
 
@@ -39,6 +50,7 @@ function Feed(){
                     text={post.text}
                     avatar={post.avatar}
                     image={post.image}
+                    time={post.time}
                 />
             ))}
             </FlipMove>

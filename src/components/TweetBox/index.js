@@ -29,7 +29,7 @@ function TweetBox({postsOnDatabase}){
             text: tweetMessage,
             image: tweetImage,
             avatar: "https://pbs.twimg.com/profile_images/1509897352081022978/jPWokXTe_x96.jpg",
-            time: new Date()
+            time: new Date().getTime()
         }
 
         // call function to add post
