@@ -1,4 +1,6 @@
 # Twitter Clone
+<img width="1680" alt="Screen Shot 2022-05-31 at 9 47 39 PM" src="https://user-images.githubusercontent.com/51968644/171306340-bc1bb31d-4ee1-4331-a95e-249c64cccb97.png">
+
 
 That is my first project whith ReactJS.
 
